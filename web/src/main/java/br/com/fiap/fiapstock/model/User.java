@@ -22,6 +22,8 @@ public class User {
     @Column
     private String password;
 
+    private String passportNumber;
+
     @Column(name = "data_criacao", updatable = false, nullable = false)
     @CreatedDate
     private Date dataCriacao;
@@ -47,7 +49,7 @@ public class User {
     }
 
     public String getPassword() {
-        return password;
+        return password + passportNumber;
     }
 
     public void setPassword(String password) {
